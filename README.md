@@ -3,12 +3,27 @@
 Converts extracted Eamon adventure game files from Apple II dsk images to formats suitable for use with modern versions of the Eamon system, such as [this one](https://github.com/kdechant/eamon) by Keith Dechant.
 
 
-## Notes
+## Requirements
+
+## System Requirements
+
+* macOS Mojave V10.14.4 +
+* Swift 5 +
+
+
+### Supported Eamon Systems
+
+* Both ProDOS and DOS 3.3 Eamon systems
+* Eamon V4, 5, and 6 -- (not fully tested, but should work)
+* Eamon V7 -- (not yet supported)
+
+
+## Disclaimer
 
 This utility is very much 
 a work in progress. Usage is particularly barebones at present.
 
-Swift is not my first programming language; there are still gaps in my understanding of it. As a result, there are probably more elegant ways of accomplishing parts of this code. 
+Swift is not my first programming language; there are still gaps in my understanding of it. There are probably more elegant ways of accomplishing parts of this code. 
 
 
 ## Usage
@@ -26,6 +41,7 @@ Source files should follow these naming conventions:
     * eamon.name.txt
     * eamon.desc.txt
     * eamon.room.name.txt
+    * eamon.rooms.txt
     * eamon.artifacts.txt
     * eamon.monsters.txt
 * Applesoft Basic Programs
