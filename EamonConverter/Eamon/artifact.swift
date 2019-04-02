@@ -91,7 +91,7 @@ class Artifact {
     var attributes: [Int?] {
         get {
             var attribs = [Int?]()
-            for i in 0..<8 { attribs.append(nil) }
+            for _ in 0..<8 { attribs.append(nil) }
             for i in 0..<_attributes.count {
                 attribs[i] = _attributes[i]
             }

@@ -17,7 +17,7 @@ extension String {
     }
     
     func inputs(_ quantity: Int) -> [String]? {
-        var total = quantity
+        let total = quantity
         let inputs = self.components(separatedBy: "\r")
         if inputs.count < total { return nil }
         var subset = [String]()

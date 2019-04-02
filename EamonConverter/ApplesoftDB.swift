@@ -26,7 +26,7 @@ class ApplesoftDB {
     init (_ path: String, recordLength: Int, asRaw: Bool) {
         do {
             _rawData = try String(contentsOfFile: path, encoding:.ascii)
-        } catch let error {
+        } catch {
             print("Error: No such file \(path)")
             _recLength = 0
             return
@@ -54,7 +54,7 @@ class ApplesoftDB {
      * Thus, a record may contain garbage data before, after, or both before/after the string itself.
      */
     private func processStringRecords() -> [String] {
-        var origRecs = _rawData.group(of: _recLength)
+        let origRecs = _rawData.group(of: _recLength)
         var newRecs = [String]()
         var tmpRec: String
         for rec in origRecs {
@@ -89,7 +89,7 @@ class ApplesoftDB {
      * These function preserves the structure of the valud data and discards garbage data.
      */
     private func processRawRecords() -> [String] {
-        var origRecs = _rawData.group(of: _recLength)
+        let origRecs = _rawData.group(of: _recLength)
         var newRecs = [String]()
         var tmpRec: String
         for rec in origRecs {
