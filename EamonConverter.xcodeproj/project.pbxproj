@@ -36,6 +36,7 @@
 		BE23AB9D2252E7260028E6A0 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		BE7985B92253E051001074BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE7985BA2253E43D001074BE /* String-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-extension.swift"; sourceTree = "<group>"; };
+		BE7985BC2253FCE5001074BE /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BE83E7A1223D9BDF006D0E7D /* EamonConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EamonConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE83E7A4223D9BDF006D0E7D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BED58E8A224D87A70074625C /* ApplesoftDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplesoftDB.swift; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				BE7985B92253E051001074BE /* README.md */,
+				BE7985BC2253FCE5001074BE /* LICENSE.md */,
 				BE83E7A3223D9BDF006D0E7D /* EamonConverter */,
 				BE83E7A2223D9BDF006D0E7D /* Products */,
 			);
