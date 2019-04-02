@@ -52,6 +52,7 @@ All data from the Eamon database files is converted to JSON according to object 
 * artifacts.json
 * effects.json
 * monsters.json
+* dungeon.json — (full archive of all adventure data)
 
 Printed text from the adventure's intro Applesoft Basic program is extracted and saved to a plain test file, suitable for further editing and copying into a modern system. Due to the nature of Applesoft Basic, some strings printed provided other functionality and will be extracted despite not being part of the intro text. (e.g. "PR#3" activated 80 column mode for Apple II video output.)
 
@@ -64,10 +65,10 @@ After importing the resulting data into a modern system, you will almost certain
 * Whitespace is collapsed in Room, Artifact, Effect, and Monster descriptions.
 * Artifact names are converted to lowercase. (e.g. "bag of gold coins")
 * Monster names are converted to capitalized case. (e.g. "Brave Sir Robin")
+* Dungeon title is converted to capitalized case.
 
 ## ToDo
 
-* Implement full JSON archive
 * Test support for 10 direction-based Eamon adventures
 * Implement detection of Eamon version
 * Implement support for Eamon V7

@@ -8,6 +8,24 @@
 
 import Foundation
 
+struct CodableDungeon: Codable {
+    var name: String
+    var number_of_directions: Int
+    var rooms: [CodableRoom]
+    var artifacts: [CodableArtifact]
+    var effects: [CodableEffect]
+    var monsters: [CodableMonster]
+
+    init(_ dungeon: Dungeon) {
+        self.name = dungeon.name
+        self.number_of_directions = dungeon.directions
+        self.rooms = dungeon.codableRooms
+        self.artifacts = dungeon.codableArtifacts
+        self.effects = dungeon.codableEffects
+        self.monsters = dungeon.codableMonsters
+    }
+}
+
 class Dungeon {
     // expected file names for data
     private let _EamonNameFile = "eamon.name.txt"
@@ -168,18 +186,27 @@ class Dungeon {
     }
     
     var name: String {
-        get { return _name }
+        get { return _name.capitalized }
         set { }
     }
-    
+
+    var directions: Int {
+        get { return _directions }
+        set { _directions = newValue }
+    }
+
     var description: String {
         get {
             var description: String
-            description = "\(_name) [🧭\(_directions)]\n"
+            description = "\(self.name) [🧭\(_directions)]\n"
             description += "[🏰\(_numberOfRooms) | 💎\(_numberOfArtifacts) | ✨\(_numberOfEffects) | 👾\(_numberOfMonsters)]\n"
             return description
         }
         set { }
     }
-    
+
+    var codable: CodableDungeon {
+        get { return CodableDungeon(self) }
+        set { }
+    }
 }

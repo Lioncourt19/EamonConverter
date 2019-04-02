@@ -61,6 +61,15 @@ catch {
 }
 
 do {
+    let jsonDungeon = try jsonEncoder.encode(dgn.codable)
+    url = URL(fileURLWithPath: "dungeon.json", relativeTo: currentDirURL)
+    try jsonDungeon.write(to: url)
+}
+catch {
+    print("Error: Can't encode/write dungeon.json")
+}
+
+do {
     let intro = Intro("eamon.intro.txt")
     if intro.text.count > 1 {
         try intro.text.write(toFile: "intro.txt", atomically: false, encoding: String.Encoding.utf8)
