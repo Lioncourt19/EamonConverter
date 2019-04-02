@@ -8,6 +8,8 @@ Converts extracted Eamon adventure game files from Apple II dsk images to format
 This utility is very much 
 a work in progress. Usage is particularly barebones at present.
 
+Swift is not my first programming language; there are still gaps in my understanding of it. As a result, there are probably more elegant ways of accomplishing parts of this code. 
+
 
 ## Usage
 
@@ -16,7 +18,7 @@ At the command line, change to the directory which includes your Apple II source
 
 ### Source Files
 
-Source files should be extracted from the Apple II disk image with a tool such as [Dskalyzer](https://github.com/paleotronic/dskalyzer), or other Apple disk image management system. In the case of Dskalyzer, use the .txt not .asc version of the database files, and the .asc version of the Applesoft Basic program files.
+Source files should be extracted from the Apple II disk image with a tool such as [Dskalyzer](https://github.com/paleotronic/dskalyzer), or another Apple disk image management utility. In the case of Dskalyzer, use the .txt not .asc version of the database files, and the .asc version of the Applesoft Basic program files.
 
 Source files should follow these naming conventions:
 
