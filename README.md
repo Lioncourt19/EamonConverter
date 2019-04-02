@@ -23,13 +23,13 @@ Source files should be extracted from the Apple II disk image with a tool such a
 Source files should follow these naming conventions:
 
 * Database files
-* eamon.name.txt
-* eamon.desc.txt
-* eamon.room.name.txt
-* eamon.artifacts.txt
-* eamon.monsters.txt
+    * eamon.name.txt
+    * eamon.desc.txt
+    * eamon.room.name.txt
+    * eamon.artifacts.txt
+    * eamon.monsters.txt
 * Applesoft Basic Programs
-* eamon.intro.txt
+    * eamon.intro.txt
 
 ### Generated Files
 
