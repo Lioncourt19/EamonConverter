@@ -15,7 +15,7 @@ extension String {
             String(chars[$0..<min($0+n, chars.count)])
         }
     }
-
+    
     func inputs(_ quantity: Int) -> [String]? {
         var total = quantity
         let inputs = self.components(separatedBy: "\r")
@@ -26,7 +26,7 @@ extension String {
         }
         return subset
     }
-
+    
     func collapseWhitespace() -> String {
         let stripped = self.components(separatedBy: .whitespaces)
         var result = ""

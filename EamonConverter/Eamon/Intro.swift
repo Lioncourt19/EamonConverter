@@ -9,9 +9,9 @@
 import Foundation
 
 class Intro {
-
+    
     private var _rawData = String()
-
+    
     init (_ path: String) {
         do {
             self._rawData = try String(contentsOfFile: path, encoding:.ascii)
@@ -19,7 +19,7 @@ class Intro {
             print ("\(path) not found.")
         }
     }
-
+    
     var text: String {
         get {
             var text = String()
@@ -31,5 +31,5 @@ class Intro {
         }
         set { }
     }
-
+    
 }

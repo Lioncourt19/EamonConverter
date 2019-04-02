@@ -10,6 +10,7 @@
 		BE23AB9A225254020028E6A0 /* artifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23AB99225254020028E6A0 /* artifact.swift */; };
 		BE23AB9C2252A9190028E6A0 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23AB9B2252A9190028E6A0 /* Monster.swift */; };
 		BE23AB9E2252E7260028E6A0 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23AB9D2252E7260028E6A0 /* Intro.swift */; };
+		BE7985BB2253E43D001074BE /* String-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7985BA2253E43D001074BE /* String-extension.swift */; };
 		BE83E7A5223D9BDF006D0E7D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83E7A4223D9BDF006D0E7D /* main.swift */; };
 		BED58E8B224D87A70074625C /* ApplesoftDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED58E8A224D87A70074625C /* ApplesoftDB.swift */; };
 		BED58E8E224E77820074625C /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED58E8D224E77820074625C /* Room.swift */; };
@@ -34,6 +35,7 @@
 		BE23AB9B2252A9190028E6A0 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		BE23AB9D2252E7260028E6A0 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		BE7985B92253E051001074BE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BE7985BA2253E43D001074BE /* String-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-extension.swift"; sourceTree = "<group>"; };
 		BE83E7A1223D9BDF006D0E7D /* EamonConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EamonConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE83E7A4223D9BDF006D0E7D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BED58E8A224D87A70074625C /* ApplesoftDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplesoftDB.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				BE83E7A4223D9BDF006D0E7D /* main.swift */,
 				BED58E8A224D87A70074625C /* ApplesoftDB.swift */,
+				BE7985BA2253E43D001074BE /* String-extension.swift */,
 				BED58E8C224E76E10074625C /* Eamon */,
 			);
 			path = EamonConverter;
@@ -157,6 +160,7 @@
 				BED58E8B224D87A70074625C /* ApplesoftDB.swift in Sources */,
 				BE23AB9A225254020028E6A0 /* artifact.swift in Sources */,
 				BE83E7A5223D9BDF006D0E7D /* main.swift in Sources */,
+				BE7985BB2253E43D001074BE /* String-extension.swift in Sources */,
 				BED58E8E224E77820074625C /* Room.swift in Sources */,
 				BE23AB9C2252A9190028E6A0 /* Monster.swift in Sources */,
 			);

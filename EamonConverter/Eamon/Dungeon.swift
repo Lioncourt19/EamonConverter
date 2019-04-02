@@ -16,7 +16,7 @@ class Dungeon {
     private let _EamonRoomsFile = "eamon.rooms.txt"
     private let _EamonArtifactsFile = "eamon.artifacts.txt"
     private let _EamonMonstersFile = "eamon.monsters.txt"
-
+    
     private var _name = "Untitled"
     private var _directions = 6
     private var _numberOfRooms = 0
@@ -24,12 +24,12 @@ class Dungeon {
     private var _numberOfEffects = 0
     private var _numberOfMonsters = 0
     private var _desc: ApplesoftDB
-
+    
     private var _rooms = [Room]()
     private var _artifacts = [Artifact]()
     private var _effects = [Effect]()
     private var _monsters = [Monster]()
-
+    
     init() {
         _desc = ApplesoftDB(_EamonDescFile, recordLength: 256, asRaw: false)
         loadEamonName(_EamonNameFile)
@@ -39,7 +39,7 @@ class Dungeon {
         loadEffects(desc: _desc)
         loadMonsters(monstersFile: _EamonMonstersFile, desc: _desc)
     }
-
+    
     private func loadEamonName(_ file: String) {
         let tmpDB = ApplesoftDB(file, recordLength: 0, asRaw: true)
         let tmpInputs = tmpDB.records[0].inputs(2)
@@ -48,18 +48,18 @@ class Dungeon {
             if Int(tmpInputs![1]) == nil { _directions = 6 } else { _directions = Int(tmpInputs![1])! }
         }
     }
-
+    
     private func loadQuantities(_ file: String) {
         let tmpDB = ApplesoftDB(file, recordLength: 0, asRaw: true)
         let tmpInputs = tmpDB.records[0].inputs(4)
         if tmpInputs != nil {
-if Int(tmpInputs![0]) != nil { _numberOfRooms = Int(tmpInputs![0])! }
+            if Int(tmpInputs![0]) != nil { _numberOfRooms = Int(tmpInputs![0])! }
             if Int(tmpInputs![1]) != nil { _numberOfArtifacts = Int(tmpInputs![1])! }
-if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
+            if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
             if Int(tmpInputs![3]) != nil { _numberOfMonsters = Int(tmpInputs![3])! }
         }
     }
-
+    
     private func loadRooms(namesFile: String, connectionsFile: String, desc: ApplesoftDB) {
         let names = ApplesoftDB(namesFile, recordLength: 64, asRaw: false)
         let connections = ApplesoftDB(connectionsFile, recordLength: 64, asRaw: true)
@@ -77,7 +77,7 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
             _rooms.append(newRoom)
         }
     }
-
+    
     private func loadArtifacts(artifactsFile: String, desc: ApplesoftDB) {
         let offset = 100
         let artifactsDB = ApplesoftDB(artifactsFile, recordLength: 128, asRaw: true)
@@ -96,7 +96,7 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
             _artifacts.append(newArtifact)
         }
     }
-
+    
     private func loadEffects(desc: ApplesoftDB) {
         let offset = 200
         _effects.append(Effect()) // dummy effect
@@ -104,7 +104,7 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
             _effects.append(Effect(id: i, desc: desc.records[i + offset]))
         }
     }
-
+    
     private func loadMonsters(monstersFile: String, desc: ApplesoftDB) {
         let offset = 300
         let monstersDB = ApplesoftDB(monstersFile, recordLength: 128, asRaw: true)
@@ -122,7 +122,7 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
             _monsters.append(newMonster)
         }
     }
-
+    
     var codableRooms: [CodableRoom] {
         get {
             var codableRooms = [CodableRoom]()
@@ -133,7 +133,7 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
         }
         set { }
     }
-
+    
     var codableArtifacts: [CodableArtifact] {
         get {
             var codableArtifacts = [CodableArtifact]()
@@ -144,7 +144,7 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
         }
         set { }
     }
-
+    
     var codableEffects: [CodableEffect] {
         get {
             var codableEffects = [CodableEffect]()
@@ -155,7 +155,7 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
         }
         set { }
     }
-
+    
     var codableMonsters: [CodableMonster] {
         get {
             var codableMonsters = [CodableMonster]()
@@ -166,12 +166,12 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
         }
         set { }
     }
-
+    
     var name: String {
         get { return _name }
         set { }
     }
-
+    
     var description: String {
         get {
             var description: String
@@ -181,5 +181,5 @@ if Int(tmpInputs![2]) != nil { _numberOfEffects = Int(tmpInputs![2])! }
         }
         set { }
     }
-
+    
 }

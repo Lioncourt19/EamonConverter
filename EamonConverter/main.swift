@@ -12,18 +12,11 @@ let _appTitle = "EamonConverter 🧙🏽‍♀️"
 let _author = "Josh de Lioncourt"
 let _versionMajor = 0
 let _versionMinor = 6
-let _versionRevision = 0
+let _versionRevision = 5
 
 print("\(_appTitle)")
 print("\tby \(_author)")
 print("\tVersion \(_versionMajor).\(_versionMinor).\(_versionRevision)\n");
-
-/*
-if CommandLine.arguments.count < 3 {
-    print("Usage: EamonConverter <path> <recLength> <asRaw>")
-    exit(EXIT_FAILURE)
-}
-*/
 
 var dgn = Dungeon()
 
@@ -72,7 +65,7 @@ do {
     if intro.text.count > 1 {
         try intro.text.write(toFile: "intro.txt", atomically: false, encoding: String.Encoding.utf8)
     }
-    } catch {
+} catch {
 }
 
 print(dgn.description)
