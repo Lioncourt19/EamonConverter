@@ -33,6 +33,7 @@
 		BE23AB99225254020028E6A0 /* artifact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artifact.swift; sourceTree = "<group>"; };
 		BE23AB9B2252A9190028E6A0 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		BE23AB9D2252E7260028E6A0 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
+		BE7985B82253DB32001074BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE83E7A1223D9BDF006D0E7D /* EamonConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EamonConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE83E7A4223D9BDF006D0E7D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BED58E8A224D87A70074625C /* ApplesoftDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplesoftDB.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		BE83E798223D9BDE006D0E7D = {
 			isa = PBXGroup;
 			children = (
+				BE7985B82253DB32001074BE /* README.md */,
 				BE83E7A3223D9BDF006D0E7D /* EamonConverter */,
 				BE83E7A2223D9BDF006D0E7D /* Products */,
 			);
