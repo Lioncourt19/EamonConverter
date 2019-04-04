@@ -13,7 +13,7 @@ You may be able to compile EamonConverter for other operating systems supporting
 
 ### Supported Eamon Systems
 
-* Both ProDOS and DOS 3.3 Eamon systems
+* ProDOS Eamon system
 * Eamon V4, 5, and 6 -- (not fully tested, but should work)
 * Eamon V7 -- (not yet supported)
 
@@ -72,5 +72,6 @@ After importing the resulting data into a modern system, you will almost certain
 * Test support for 10 direction-based Eamon adventures
 * Implement detection of Eamon version
 * Implement support for Eamon V7
+* Debug issues for DOS 3.3
 * Implement command line argument for source files' location
 * Implement command line argument for help

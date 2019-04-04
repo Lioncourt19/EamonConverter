@@ -52,10 +52,10 @@ class Dungeon {
         _desc = ApplesoftDB(_EamonDescFile, recordLength: 256, asRaw: false)
         loadEamonName(_EamonNameFile)
         loadQuantities(_EamonDescFile)
-        loadRooms(namesFile: _EamonRoomNamesFile, connectionsFile: _EamonRoomsFile, desc: _desc)
-        loadArtifacts(artifactsFile: _EamonArtifactsFile, desc: _desc)
-        loadEffects(desc: _desc)
-        loadMonsters(monstersFile: _EamonMonstersFile, desc: _desc)
+        if _numberOfRooms > 0 { loadRooms(namesFile: _EamonRoomNamesFile, connectionsFile: _EamonRoomsFile, desc: _desc) }
+        if _numberOfArtifacts > 0 { loadArtifacts(artifactsFile: _EamonArtifactsFile, desc: _desc) }
+        if _numberOfEffects > 0 { loadEffects(desc: _desc) }
+        if _numberOfMonsters > 0 { loadMonsters(monstersFile: _EamonMonstersFile, desc: _desc) }
     }
     
     private func loadEamonName(_ file: String) {
