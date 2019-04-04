@@ -30,7 +30,7 @@ At the command line, change to the directory which includes your Apple II source
 
 ### Source Files
 
-Source files should be extracted from the Apple II disk image with a tool such as [Dskalyzer](https://github.com/paleotronic/dskalyzer), or another Apple disk image management utility. In the case of Dskalyzer, use the .txt (not .asc version) of the database files, and use the .asc (not the .bas version) of the Applesoft Basic program files.
+Source files should be extracted from the Apple II disk image with a tool such as [DiskM8](https://github.com/paleotronic/diskm8), or another Apple disk image management utility. In the case of Dskalyzer, use the .txt (not .asc version) of the database files, and use the .asc (not the .bas version) of the Applesoft Basic program files.
 
 Source files should follow the below naming conventions. You will need to rename the source files in most cases.
 
