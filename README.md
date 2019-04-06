@@ -15,7 +15,6 @@ You may be able to compile EamonConverter for other operating systems supporting
 
 * ProDOS Eamon system
 * Eamon V4, 5, and 6 -- (not fully tested, but should work)
-* Eamon V7 -- (not yet supported)
 
 ## Disclaimer
 
@@ -46,7 +45,7 @@ Source files should follow the below naming conventions. You will need to rename
 
 ### Generated Files
 
-All data from the Eamon database files is converted to JSON according to object type as specified in the documentation for [Eamon Remastered](https://github.com/kdechant/eamon) by Keith Dechant. Some additional processing is performed on strings (e.g. object descriptions, names, etc.) to improve human readability.
+All data from the Eamon database files is converted to JSON according to object type as specified in the documentation for [Eamon Remastered](https://github.com/kdechant/eamon) by Keith Dechant. Some additional processing is performed on strings (e.g. object descriptions, names, etc.) to improve human readability. All json files are placed in a /json/ subdirectory.
 
 * rooms.json
 * artifacts.json
