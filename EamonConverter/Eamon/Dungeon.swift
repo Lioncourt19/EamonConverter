@@ -47,7 +47,9 @@ class Dungeon {
     private var _artifacts = [Artifact]()
     private var _effects = [Effect]()
     private var _monsters = [Monster]()
-    
+
+    private var _output = [String]()
+
     init() {
         _desc = ApplesoftDB(_EamonDescFile, recordLength: 256, asRaw: false)
         loadEamonName(_EamonNameFile)
@@ -56,6 +58,7 @@ class Dungeon {
         if _numberOfArtifacts > 0 { loadArtifacts(artifactsFile: _EamonArtifactsFile, desc: _desc) }
         if _numberOfEffects > 0 { loadEffects(desc: _desc) }
         if _numberOfMonsters > 0 { loadMonsters(monstersFile: _EamonMonstersFile, desc: _desc) }
+        performSmartProcessing()
     }
     
     private func loadEamonName(_ file: String) {
@@ -141,6 +144,31 @@ class Dungeon {
         }
     }
     
+    func performSmartProcessing() {
+        if _numberOfArtifacts > 0 { smartProcessArtifacts() }
+    }
+
+    private func smartProcessArtifacts() {
+        var deadBodies = 0
+        var monsterRef = 0
+        for artifact in _artifacts {
+            // process dead bodies
+            if artifact.name.contains("dead") {
+                artifact.type = 13 // dead body type
+                deadBodies += 1
+            }
+            // fix Monsters referred to in artifact.name
+            for monster in _monsters {
+                if artifact.name.contains(monster.name.lowercased()) {
+                    artifact.name = artifact.name.replacingOccurrences(of: monster.name.lowercased(), with: monster.name, options: .literal, range: nil)
+                    monsterRef += 1
+                }
+            }
+        }
+        _output.append("Processed \(deadBodies) dead body artifacts.")
+        _output.append("Processed \(monsterRef) artifacts with monster references.")
+    }
+
     var codableRooms: [CodableRoom] {
         get {
             var codableRooms = [CodableRoom]()
@@ -199,7 +227,10 @@ class Dungeon {
         get {
             var description: String
             description = "\(self.name) [🧭\(_directions)]\n"
-            description += "[🏰\(_numberOfRooms) | 💎\(_numberOfArtifacts) | ✨\(_numberOfEffects) | 👾\(_numberOfMonsters)]\n"
+            description += "[🏰\(_numberOfRooms) | 💎\(_numberOfArtifacts) | ✨\(_numberOfEffects) | 👾\(_numberOfMonsters)]\n\n"
+            for message in _output {
+                description += "\(message)\n"
+            }
             return description
         }
         set { }

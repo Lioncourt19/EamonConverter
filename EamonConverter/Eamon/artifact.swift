@@ -50,7 +50,7 @@ class Artifact {
     
     init(id: Int, name: String, desc: String, attributes: [Int?]) {
         _id = id
-        _name = name
+        _name = name.lowercased()
         _desc = desc
         _attributes = attributes
     }
@@ -61,7 +61,7 @@ class Artifact {
     }
     
     var name: String {
-        get { return _name.lowercased() }
+        get { return _name }
         set { _name = newValue }
     }
     

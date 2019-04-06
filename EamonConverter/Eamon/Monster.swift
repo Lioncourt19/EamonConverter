@@ -50,7 +50,7 @@ class Monster {
     
     init(id: Int, name: String, desc: String, attributes: [Int]) {
         _id = id
-        _name = name
+        _name = name.capitalized
         _desc = desc
         _attributes = attributes
     }
@@ -61,7 +61,7 @@ class Monster {
     }
     
     var name: String {
-        get { return _name.capitalized }
+        get { return _name }
         set { _name = newValue }
     }
     
