@@ -9,7 +9,8 @@
 import Foundation
 
 struct CodableArtifact: Codable {
-    
+
+    var id: Int
     var name: String
     var description: String
     var value: Int
@@ -22,6 +23,7 @@ struct CodableArtifact: Codable {
     var field8: Int?
     
     init(_ artifact: Artifact) {
+        self.id = artifact.id
         self.name = artifact.name
         self.description = artifact.description
         self.value = artifact.value
