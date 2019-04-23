@@ -1,6 +1,6 @@
 # EamonConverter
 
-Converts extracted Eamon adventure game files from Apple II dsk images to formats suitable for use with modern versions of the Eamon system, such as [this one](https://github.com/kdechant/eamon) by Keith Dechant.
+Converts extracted Eamon adventure game files from Apple II dsk images to formats suitable for use with [Eamon Remastered](https://github.com/kdechant/eamon) by Keith Dechant.
 
 ## Requirements
 
@@ -30,7 +30,7 @@ At the command line, change to the directory which includes your Apple II source
 
 Source files should be extracted from the Apple II disk image with a tool such as [DiskM8](https://github.com/paleotronic/diskm8), or another Apple disk image management utility. In the case of DiskM8, use the .txt (not .asc version) of the database files, and use the .asc (not the .bas version) of the Applesoft Basic program files.
 
-Source files should follow the below naming conventions. You will need to rename the source files in most cases.
+Source files should follow the below naming conventions, based on the ProDOS file names. You will need to rename the source files in most cases.
 
 * Database files
     * eamon.name.txt
@@ -44,7 +44,7 @@ Source files should follow the below naming conventions. You will need to rename
 
 ### Generated Files
 
-All data from the Eamon database files is converted to JSON according to object type as specified in the documentation for [Eamon Remastered](https://github.com/kdechant/eamon) by Keith Dechant. Some additional processing is performed on strings (e.g. object descriptions, names, etc.) to improve human readability. All json files are placed in a /json/ subdirectory.
+All data from the Eamon database files is converted to JSON according to object type as specified in the documentation for [Eamon Remastered](https://github.com/kdechant/eamon) by Keith Dechant. Some additional processing is performed on strings (e.g. object descriptions, names, etc.) to improve human readability and compatibility with Eamon Remastered. All json files are placed in a /json/ subdirectory.
 
 * rooms.json
 * artifacts.json
@@ -58,7 +58,7 @@ Printed text from the adventure's intro Applesoft Basic program is extracted and
 
 #### Additional String Processing
 
-After importing the resulting data into a modern system, you will almost certainly need to perform some additional editing. The processing provided by EamonConverter is to make the process less painful by adhere to some predictable rules that will get you most of the way to where you're going.
+After importing the resulting data into Eamon Remastered, you will almost certainly need to perform some additional editing. The processing provided by EamonConverter is to make the process less painful by adhere to some predictable rules that will get you most of the way to where you're going.
 
 * Whitespace is collapsed in Room, Artifact, Effect, and Monster descriptions.
 * Artifact names are converted to lowercase. (e.g. "bag of gold coins")

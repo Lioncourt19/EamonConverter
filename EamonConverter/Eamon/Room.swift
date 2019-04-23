@@ -67,7 +67,7 @@ class Room {
     }
     
     var name: String {
-        get { return _name }
+        get { return ("You are " + _name) }
         set { _name = newValue }
     }
     
